@@ -15,4 +15,11 @@ html {
         hue-rotate(127deg) brightness(99%) contrast(99%);
     --icon-header-hovering-color: brightness(0) saturate(100%) invert(67%) sepia(50%) saturate(565%)
         hue-rotate(75deg) brightness(86%) contrast(91%); //#47c052
+
+    // footer
+    --footer-bg-color: #212922;
+    --footer-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7468%)
+        hue-rotate(127deg) brightness(99%) contrast(99%);
+    --footer-icon-hovering-color: brightness(0) saturate(100%) invert(67%) sepia(50%) saturate(565%)
+        hue-rotate(75deg) brightness(86%) contrast(91%); //#47c052
 }

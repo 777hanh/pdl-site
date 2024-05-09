@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    width: 60px;
 
     @include abstracts.screen(lg) {
         margin-left: auto;
@@ -19,7 +20,8 @@
 
     &__img {
         display: block;
-        width: 60px;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 }
