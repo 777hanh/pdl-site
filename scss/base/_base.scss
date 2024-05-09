@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+html {
+    // set 10px = 1rem;
+    font-size: abstracts.$font-size-reset;
+}
+
+body {
+    font-family: abstracts.$font-family;
+    font-size: abstracts.$font-size-base;
+    color: var(--text-color);
+    background: var(--body-bg-color);
+}

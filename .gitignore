@@ -1,0 +1,9 @@
+
+# Folders
+node_modules/
+.vscode/
+sass/
+
+# File
+*.css.map
+
