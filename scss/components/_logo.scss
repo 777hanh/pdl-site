@@ -1,0 +1,25 @@
+@use '../abstracts';
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    @include abstracts.screen(lg) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__text {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 145.455%;
+        color: #47c052;
+    }
+
+    &__img {
+        display: block;
+        width: 60px;
+        object-fit: contain;
+    }
+}
