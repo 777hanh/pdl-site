@@ -1631,6 +1631,7 @@ html {
   --text-color: #212922;
   --white-color: #fff;
   --body-bg-color: #fff;
+  --header-bg-color: #212922;
   --icon-header-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7468%)
       hue-rotate(127deg) brightness(99%) contrast(99%);
   --icon-header-hovering-color: brightness(0) saturate(100%) invert(67%) sepia(50%) saturate(565%)
@@ -1655,6 +1656,11 @@ body {
 
 .header {
   background-color: #212922;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
 }
 
 .navbar {
@@ -1948,10 +1954,164 @@ body {
   opacity: 0.65;
 }
 
-h1 {
-  font-family: "DM serif Display";
-  color: red;
-  font-size: 80px;
+.home {
+  color: #212922;
+}
+.home__header {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.home__title {
+  color: #212922;
+  font-family: "DM Serif Display";
+  font-size: 3.8rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+@supports (animation-timeline: scroll(y)) {
+  .home__header {
+    background-color: transparent;
+    animation: header-scroll linear forwards;
+    animation-timeline: scroll(y);
+    animation-range-start: 0px;
+    animation-range-end: 750px;
+  }
+}
+@keyframes header-scroll {
+  to {
+    background-color: var(--header-bg-color);
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 800px;
+  background-image: url("../imgs/home-hero.png");
+  background-position: center;
+  background-size: cover;
+}
+.hero__content {
+  margin: 0 12px;
+}
+.hero__bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+.hero__span {
+  color: #fff;
+  display: block;
+  font-size: 6rem;
+  font-weight: 700;
+}
+.hero__span-mark {
+  display: block;
+  color: #47c052;
+  font-family: "DM Serif Display";
+  font-size: 7rem;
+  font-style: italic;
+  letter-spacing: 0.14rem;
+}
+.hero__desc {
+  margin-top: 55px;
+  padding-right: 40px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 0.0312rem;
+}
+.hero__video {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #212922;
+}
+
+.services {
+  margin: 0 24px;
+  padding: 80px 0 40px;
+}
+.services__desc {
+  margin-top: 30px;
+  max-width: 850px;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.12rem;
+}
+.services__list {
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
+}
+.services__item {
+  padding: 25px 33px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+}
+.services__item:hover {
+  box-shadow: 0px 4px 20px 0px rgba(33, 41, 34, 0.25);
+}
+.services__img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.services__item-title {
+  margin-top: 25px;
+  font-family: "DM Sans";
+  font-size: 2.4rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.services__item-desc {
+  margin-top: 15px;
+  font-family: "DM Sans";
+  font-size: 1.5rem;
+  letter-spacing: 0.12rem;
+}
+
+.impact {
+  margin: 0 24px;
+  padding: 40px 0;
+}
+.impact__title {
+  margin-top: 40px;
+}
+.impact__row {
+  margin-top: 50px;
+  align-items: center;
+}
+.impact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 20px;
+}
+.impact__number {
+  color: #5b8266;
+  font-family: "DM Serif Display";
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 122.222%;
+  letter-spacing: 0.3rem;
+}
+.impact__desc {
+  margin-top: 20px;
+  color: #161c2d;
+  font-family: "DM Sans";
+  font-size: 2.4rem;
+  line-height: 133.333%;
+}
+.impact__images {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

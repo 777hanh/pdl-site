@@ -1,0 +1,155 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pharos Digital Labs</title>
+
+        <!-- Favicon -->
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="../assets/css/main.css" />
+
+        <!-- Script -->
+        <script src="../assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header home__header" id="header"></header>
+        <script>
+            loadComponent('#header', '../templates/header.html');
+        </script>
+
+        <!-- Main -->
+        <main class="main home">
+            <div class="home__inner">
+                <!-- hero -->
+                <section class="hero">
+                    <div class="container">
+                        <div class="row align-items-center hero__content">
+                            <div class="col col-8">
+                                <div class="hero__info">
+                                    <h1 class="hero__title">
+                                        <span class="hero__span">Shine Online with</span>
+                                        <p class="hero__span-mark">Pharos Digital Labs</p>
+                                    </h1>
+                                    <p class="hero__desc">
+                                        Pharos Digital Labs is an innovative forward digital consulting firm
+                                        providing creative technological solutions to Australian businesses
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col col-4">
+                                <div>
+                                    <video
+                                        muted
+                                        autoplay
+                                        loop
+                                        class="hero__video"
+                                        src="https://media.istockphoto.com/id/1494050632/vi/video/nh%E1%BA%AFn-tin-tr%E1%BB%B1c-tuy%E1%BA%BFn.mp4?s=mp4-640x640-is&k=20&c=pR479Mk-NrQPFYhXZlANxao4bbzVh3zOHXLoikEKt0Y="
+                                    ></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="container">
+                    <!-- our services -->
+                    <section class="services">
+                        <h2 class="home__title">OUR SERVICES</h2>
+                        <p class="services__desc">
+                            We offer a comprehensive suite of digital solutions tailored to enhance your
+                            online presence and streamline your operations. From initial design to full-scale
+                            development and ongoing management, our services are designed to meet every need
+                            of your growing business. Discover how we can help you excel in the digital
+                            landscape.
+                        </p>
+
+                        <div class="services__list">
+                            <!-- Services Item 1 -->
+                            <div class="services__item">
+                                <img
+                                    class="services__img"
+                                    src="../assets/imgs/service-img-1.png"
+                                    alt="Web & Application Development"
+                                />
+                                <h3 class="services__item-title">Web & Application Development</h3>
+                                <p class="services__item-desc">
+                                    Designing captivating websites and user-friendly apps, supported by
+                                    efficient project management and reliable maintenance services
+                                </p>
+                            </div>
+                            <!-- Services Item 2 -->
+                            <div class="services__item">
+                                <img
+                                    class="services__img"
+                                    src="../assets/imgs/service-img-2.png"
+                                    alt="Digital Systems"
+                                />
+                                <h3 class="services__item-title">Digital Systems</h3>
+                                <p class="services__item-desc">
+                                    Maximizing data efficiency and email reliability, while integrating AI
+                                    solutions for streamlined operations and innovative advancements
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Our Impact -->
+                    <section class="impact">
+                        <h2 class="home__title impact__title">HOW WE CREATE CHANGE</h2>
+                        <div class="row impact__row">
+                            <div class="col col-5">
+                                <div class="impact__content">
+                                    <!-- Item 1 -->
+                                    <div class="impact__item">
+                                        <h3 class="impact__number">100+</h3>
+                                        <p class="impact__desc">
+                                            Customers visit PDL every month to get their service done.
+                                        </p>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="impact__item">
+                                        <h3 class="impact__number">94%</h3>
+                                        <p class="impact__desc">
+                                            Satisfaction rate comes from our awesome customers.
+                                        </p>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="impact__item">
+                                        <h3 class="impact__number">4.9 / 5.0</h3>
+                                        <p class="impact__desc">
+                                            Average customer ratings we have got all over internet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col col-6 offset-1">
+                                <div>
+                                    <img
+                                        class="impact__images"
+                                        src="../assets/imgs/impact.png"
+                                        alt="HOW WE CREATE CHANGE"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Our Team -->
+                    <section class="team"></section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer"></footer>
+        <script>
+            loadComponent('#footer', '../templates/footer.html');
+        </script>
+    </body>
+</html>
