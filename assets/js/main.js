@@ -82,3 +82,46 @@ function initJsToggle() {
         };
     });
 }
+
+/**
+ * JS Drag
+ *
+ * Cách dùng:
+ * <div class="js-drag slider">
+ *      <div class="item"></div>
+ *      <div class="item"></div>
+ * </div>
+ */
+function initDragJs() {
+    let mouseDown = false;
+    let startX, scrollLeft;
+
+    $$('.js-drag').forEach((slider) => {
+        const startDragging = (e) => {
+            mouseDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+
+        const stopDragging = (e) => {
+            mouseDown = false;
+        };
+
+        const move = (e) => {
+            e.preventDefault();
+            if (!mouseDown) {
+                return;
+            }
+            const x = e.pageX - slider.offsetLeft;
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+        };
+
+        // Add the event listeners
+        slider.addEventListener('mousemove', move, false);
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    });
+}
+window.addEventListener('template-loaded', initDragJs);

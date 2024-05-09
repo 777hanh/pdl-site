@@ -1,0 +1,164 @@
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 90%;
+    height: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    translate: -50% -50%;
+    transition: 0.2s linear;
+    transition-property: visibility, opacity;
+
+    z-index: 99999;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    &.show ~ &__overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: 0.2s linear;
+        transition-property: visibility, opacity;
+    }
+
+    &__close {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: 30px;
+        right: 30px;
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            cursor: pointer;
+
+            .modal__close-icon {
+                filter: brightness(0) saturate(100%) invert(67%) sepia(50%) saturate(565%) hue-rotate(75deg)
+                    brightness(86%) contrast(91%);
+            }
+        }
+    }
+
+    &__close-icon {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    gap: 24px;
+
+    margin-top: 2vh;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+
+    border-radius: 20px;
+    background: linear-gradient(90deg, #5b8266, #5b8266 30%, #fff 30%, #fff);
+
+    &__inner {
+        margin-left: auto;
+        padding: 50px 40px 50px 0;
+        width: 60%;
+        overflow-y: scroll;
+        overscroll-behavior-y: none;
+    }
+
+    &__title {
+        color: #212922;
+        font-family: 'DM Serif Display';
+        font-size: 3.6rem;
+        line-height: 150%;
+    }
+
+    &__job {
+        margin-top: 16px;
+        color: #34733a;
+        font-family: 'DM Sans';
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 144.444%;
+    }
+
+    &__body {
+        margin-top: 30px;
+    }
+
+    &__desc {
+        color: #212922;
+        font-family: 'DM Sans';
+        font-size: 1.9rem;
+        font-weight: 400;
+        line-height: 144.444%;
+
+        & + & {
+            margin-top: 10px;
+        }
+    }
+
+    &__socials {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 24px;
+        height: 24px;
+
+        &:hover {
+            .modal-content__social-icon {
+                filter: brightness(0) saturate(100%) invert(67%) sepia(50%) saturate(565%) hue-rotate(75deg)
+                    brightness(86%) contrast(91%);
+            }
+        }
+    }
+
+    &__avatar {
+        width: 40%;
+        margin-top: 50px;
+        position: sticky;
+        top: 50px;
+    }
+
+    &__img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        top: 40px;
+        left: 40px;
+        width: min(330px, calc(100% - 80px));
+    }
+}

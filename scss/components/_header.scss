@@ -19,12 +19,12 @@
     }
 
     &.show &__overlay {
+        display: block;
         visibility: visible;
         opacity: 1;
     }
 
     &__overlay {
-        display: block;
         visibility: hidden;
         position: fixed;
         top: 0;

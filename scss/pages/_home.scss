@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 800px;
     background-image: url('../imgs/home-hero.png');
     background-position: center;
@@ -180,5 +180,149 @@
 
     &__images {
         width: 100%;
+    }
+}
+
+.team {
+    margin: 0 24px;
+    padding: 40px 0;
+
+    &__title {
+        margin-top: 40px;
+    }
+
+    &__desc {
+        margin-top: 35px;
+        max-width: 70%;
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 40px;
+        gap: 24px;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    &-item {
+        --width: 25%;
+
+        width: calc(var(--width) - 24px);
+        flex-shrink: 0;
+        border-radius: 20px;
+        border: 1px solid #f0f0f0;
+
+        overflow: hidden;
+
+        &:hover {
+            .team-item__img {
+                filter: grayscale(0);
+            }
+            .team-item__info {
+                background: #e5ebe6;
+            }
+            .team-item__name {
+                color: #294936;
+            }
+            .team-item__socials {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &-item__avatar {
+        position: relative;
+    }
+
+    &-item__img {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        filter: grayscale(1);
+        transition: filter 0.2s linear;
+        user-select: none;
+    }
+
+    &-item__socials {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+        width: 100%;
+        gap: 20px;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    &-item__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: #34733a;
+
+            .team-item__social-icon {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &-item__social-icon {
+        width: 18px;
+    }
+
+    &-item__info {
+        padding: 20px;
+        text-align: center;
+        transition: background 0.2s linear;
+    }
+
+    &-item__name {
+        font-family: 'DM Serif Display';
+        font-size: 2.2rem;
+
+        transition-property: color;
+        transition: 0.2s linear;
+    }
+
+    &-item__job {
+        margin-top: 10px;
+        color: #34733a;
+        font-family: 'DM Sans';
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &-item__more {
+        margin-top: 24px;
+        width: 150px;
+        height: 44px;
+
+        font-family: 'DM Sans';
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        border: 1px solid #34733a;
+        border-radius: 12px;
+        transition: 0.2s linear;
+        transition-property: background-color, color;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #34733a;
+            color: var(--white-color);
+        }
     }
 }
