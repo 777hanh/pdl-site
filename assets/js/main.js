@@ -128,6 +128,8 @@ window.addEventListener('template-loaded', initDragJs);
 
 // Slider
 function initSlider() {
+    let isMove = false;
+
     // Lấy danh sách các item trong carousel
     const carouselItems = document.querySelectorAll('.testimonials__slide');
     const paginationItems = document.querySelectorAll('.pagination__item');
@@ -135,6 +137,9 @@ function initSlider() {
 
     // Xác định hành động khi nhấn nút next
     document.querySelector('.testimonials__slide-btn-next').addEventListener('click', () => {
+        if (isMove) return;
+        isMove = true;
+
         // Tìm item hiện tại có class 'active'
         let currentItem = document.querySelector('.testimonials__slide.active');
         if (!currentItem) {
@@ -166,6 +171,8 @@ function initSlider() {
             },
             { once: true },
         );
+
+        isMove = false;
     });
 
     const reflow = (element) => {
@@ -173,6 +180,9 @@ function initSlider() {
     };
 
     document.querySelector('.testimonials__slide-btn-prev').addEventListener('click', () => {
+        if (isMove) return;
+
+        isMove = true;
         // Tìm item hiện tại có class 'active'
         let currentItem = document.querySelector('.testimonials__slide.active');
         if (!currentItem) {
@@ -204,14 +214,24 @@ function initSlider() {
             },
             { once: true },
         );
+
+        isMove = false;
     });
 
     // loop
+    let timer = '';
     loopCarousel();
+
     function loopCarousel() {
-        setInterval(() => {
+        if (isMove) return;
+        isMove = true;
+        clearInterval(timer);
+        timer = setInterval(() => {
             document.querySelector('.testimonials__slide-btn-next').click();
         }, 5000);
+        isMove = false;
     }
 }
+
 window.addEventListener('template-loaded', initSlider);
+window.addEventListener('resize', initSlider);

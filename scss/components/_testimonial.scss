@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .testimonials {
     margin-inline: 24px;
     padding: 140px 0;
@@ -17,15 +19,35 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        @include abstracts.screen(sm) {
+            position: relative;
+            width: auto;
+            height: 32px;
+            justify-content: space-evenly;
+        }
     }
 
     &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         align-self: center;
-        width: 50px;
-        height: 50px;
+        width: 36px;
+        height: 36px;
         cursor: pointer;
         border-radius: 50%;
         opacity: 0.4;
+
+        @include abstracts.screen(md) {
+            height: 28px;
+            width: 28px;
+        }
+
+        @include abstracts.screen(sm) {
+            border-radius: 12px;
+            flex: 1;
+        }
 
         &--reverse {
             transform: rotate(180deg);
@@ -33,6 +55,17 @@
 
         &:hover {
             opacity: 1;
+        }
+    }
+
+    &__btn-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include abstracts.screen(sm) {
+            width: unset;
+            height: 20px;
         }
     }
 
@@ -46,6 +79,10 @@
 
         overflow: hidden;
         z-index: 1;
+
+        @include abstracts.screen(lg) {
+            width: 80%;
+        }
     }
 
     &__slide {
@@ -79,15 +116,34 @@
         justify-content: center;
         align-items: center;
         gap: 70px;
+
+        @include abstracts.screen(lg) {
+            gap: 40px;
+        }
+        @include abstracts.screen(sm) {
+            gap: 20px;
+        }
+        @include abstracts.screen(xs) {
+            gap: 10px;
+        }
     }
 
     &__avatar {
-        width: 85px;
-        height: 85px;
+        --width: 85px;
+
+        width: var(--width);
+        height: var(--width);
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include abstracts.screen(lg) {
+            --width: 56px;
+        }
+        @include abstracts.screen(sm) {
+            --width: 42px;
+        }
     }
 
     &__img {
@@ -102,6 +158,10 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
+        @include abstracts.screen(sm) {
+            gap: 16px;
+        }
     }
 
     &__name {
@@ -110,10 +170,26 @@
         font-weight: 400;
         line-height: 144.455%;
         text-transform: uppercase;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+        }
     }
 
     &__brand {
         width: 160px;
+
+        @include abstracts.screen(md) {
+            width: 125px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 85px;
+        }
     }
 
     &__job {
@@ -122,10 +198,26 @@
         line-height: 150%;
         letter-spacing: 0.2rem;
         text-transform: capitalize;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.2rem;
+        }
     }
 
     &__content {
         margin-top: 40px;
+
+        @include abstracts.screen(md) {
+            margin-top: 25px;
+        }
+
+        @include abstracts.screen(xs) {
+            margin-top: 16px;
+        }
     }
 
     &__desc {
@@ -133,6 +225,14 @@
         font-size: 2.4rem;
         font-style: italic;
         line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+
+        @include abstracts.screen(xs) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -152,6 +252,16 @@
         background-color: #f2f2f2;
         // cursor: pointer;
         transition: background-color 0.2s linear;
+
+        @include abstracts.screen(md) {
+            width: 8px;
+            height: 8px;
+        }
+
+        @include abstracts.screen(xs) {
+            width: 6px;
+            height: 6px;
+        }
     }
 
     &__item.active {
