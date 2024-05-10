@@ -225,7 +225,7 @@ function initSlider() {
     function loopCarousel() {
         if (isMove) return;
         isMove = true;
-        clearInterval(timer);
+        // clearInterval(timer);
         timer = setInterval(() => {
             document.querySelector('.testimonials__slide-btn-next').click();
         }, 5000);
@@ -234,4 +234,3 @@ function initSlider() {
 }
 
 window.addEventListener('template-loaded', initSlider);
-window.addEventListener('resize', initSlider);

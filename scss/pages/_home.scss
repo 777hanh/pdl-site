@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .home {
     color: #212922;
 
@@ -13,6 +15,13 @@
         font-size: 3.8rem;
         font-weight: 400;
         opacity: 0.7;
+
+        @include abstracts.screen(md) {
+            font-size: 3.3rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 2.8rem;
+        }
     }
 }
 
@@ -168,11 +177,21 @@
 
     &__title {
         margin-top: 40px;
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__row {
         margin-top: 50px;
         align-items: center;
+
+        @include abstracts.screen(md) {
+            margin-top: 25px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 16px;
+        }
     }
 
     &__content {
@@ -190,6 +209,13 @@
         font-weight: 400;
         line-height: 122.222%;
         letter-spacing: 0.3rem;
+
+        @include abstracts.screen(md) {
+            font-size: 3rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 2.8rem;
+        }
     }
 
     &__desc {
@@ -198,6 +224,19 @@
         font-family: 'DM Sans';
         font-size: 2.4rem;
         line-height: 133.333%;
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__image-wrapper {
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+        }
     }
 
     &__images {
@@ -211,12 +250,27 @@
 
     &__title {
         margin-top: 40px;
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__desc {
+        font-family: 'DM Sans';
         margin-top: 35px;
         max-width: 70%;
-        width: 100%;
+        font-size: 2rem;
+
+        @include abstracts.screen(md) {
+            margin-top: 25px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: 16px;
+            max-width: 100%;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
     }
 
     &__list {
@@ -237,6 +291,16 @@
         border: 1px solid #f0f0f0;
 
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            --width: calc(100% / 3);
+        }
+        @include abstracts.screen(sm) {
+            --width: calc(100% / 2);
+        }
+        @include abstracts.screen(xs) {
+            --width: calc(100% / 1 + 24px);
+        }
 
         &:hover {
             .team-item__img {
@@ -328,7 +392,7 @@
 
     &-item__more {
         margin-top: 24px;
-        width: 150px;
+        width: min(150px, calc(100% - 16px));
         height: 44px;
 
         font-family: 'DM Sans';
