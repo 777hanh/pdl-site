@@ -52,6 +52,10 @@
     background-position: center;
     background-size: cover;
 
+    @include abstracts.screen(xs) {
+        padding-top: 60px;
+    }
+
     &__content {
         margin: 0 12px;
     }
@@ -469,5 +473,113 @@
             background-color: #34733a;
             color: var(--white-color);
         }
+    }
+}
+
+// contact
+.contact {
+    min-height: 450px;
+    background: url('../imgs/bg-contact.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__inner {
+        margin: 0 24px;
+        @include abstracts.screen(md) {
+            padding: 60px 0;
+        }
+        @include abstracts.screen(sm) {
+            padding: 40px 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            height: unset;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    &__heading {
+        color: #47c052;
+        font-family: 'DM Serif Display';
+        font-size: 4.8rem;
+        font-style: normal;
+        line-height: 144.455%;
+    }
+
+    &__desc {
+        margin-top: 5px;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__sub-heading {
+        margin-top: 30px;
+        color: #47c052;
+        font-family: 'DM Serif Display';
+        font-size: 3.3rem;
+        font-style: italic;
+        line-height: 144.455%;
+        letter-spacing: 0.2rem;
+    }
+
+    &__sub-desc {
+        margin-top: 16px;
+        color: #fff;
+        font-size: 2.6rem;
+        font-style: italic;
+        line-height: 150%;
+    }
+
+    &__action {
+        text-align: center;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+        }
+        @include abstracts.screen(xs) {
+            margin-top: 20px;
+        }
+    }
+
+    &__image {
+        display: flex;
+        width: 310px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        width: 290px;
+        height: 48px;
+        background-color: #134023;
+        color: #fff;
+        border-radius: 12px;
     }
 }
