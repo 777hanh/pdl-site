@@ -2220,6 +2220,58 @@ body {
   background-color: #d9d9d9;
 }
 
+.partnership {
+  padding: 65px 0;
+  border-bottom: 1px solid #fff;
+  background: #212922;
+}
+@media (max-width: 991.98px) {
+  .partnership {
+    padding: 30px 0;
+  }
+}
+.partnership__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: hidden;
+}
+.partnership__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  animation: scroll 10s linear infinite;
+}
+.partnership__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 25%;
+  user-select: none;
+  pointer-events: none;
+}
+.partnership__img {
+  width: 48px;
+}
+@media (max-width: 991.98px) {
+  .partnership__img {
+    width: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .partnership__img {
+    width: 20px;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
 .home {
   color: #212922;
 }
