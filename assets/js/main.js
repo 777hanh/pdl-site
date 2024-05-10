@@ -125,3 +125,93 @@ function initDragJs() {
     });
 }
 window.addEventListener('template-loaded', initDragJs);
+
+// Slider
+function initSlider() {
+    // Lấy danh sách các item trong carousel
+    const carouselItems = document.querySelectorAll('.testimonials__slide');
+    const paginationItems = document.querySelectorAll('.pagination__item');
+    const arrCarouselItems = Array.from(carouselItems);
+
+    // Xác định hành động khi nhấn nút next
+    document.querySelector('.testimonials__slide-btn-next').addEventListener('click', () => {
+        // Tìm item hiện tại có class 'active'
+        let currentItem = document.querySelector('.testimonials__slide.active');
+        if (!currentItem) {
+            currentItem = carouselItems[0];
+            currentItem.classList.add('active');
+        }
+        let currentActiveItemIndex = arrCarouselItems.indexOf(currentItem);
+
+        // Tìm item kế tiếp của item hiện tại
+        let nextItem = currentItem.nextElementSibling;
+        if (!nextItem) nextItem = carouselItems[0];
+        let nextActiveItemIndex = arrCarouselItems.indexOf(nextItem);
+
+        // Thêm class 'carousel-item-start' vào current item và next item
+        nextItem.classList.add('testimonials__slide-next');
+        reflow(currentItem);
+        currentItem.classList.add('testimonials__slide-start');
+        nextItem.classList.add('testimonials__slide-start');
+
+        nextItem.addEventListener(
+            'transitionend',
+            () => {
+                nextItem.classList.remove('testimonials__slide-start', 'testimonials__slide-next');
+                nextItem.classList.add('active');
+                paginationItems[nextActiveItemIndex].classList.add('active');
+
+                currentItem.classList.remove('active', 'testimonials__slide-start');
+                paginationItems[currentActiveItemIndex].classList.remove('active');
+            },
+            { once: true },
+        );
+    });
+
+    const reflow = (element) => {
+        element.offsetHeight;
+    };
+
+    document.querySelector('.testimonials__slide-btn-prev').addEventListener('click', () => {
+        // Tìm item hiện tại có class 'active'
+        let currentItem = document.querySelector('.testimonials__slide.active');
+        if (!currentItem) {
+            currentItem = carouselItems[0];
+            currentItem.classList.add('active');
+        }
+        let currentActiveItemIndex = arrCarouselItems.indexOf(currentItem);
+
+        // Tìm item kế tiếp của item hiện tại
+        let prevItem = currentItem.previousElementSibling;
+        if (!prevItem) prevItem = carouselItems[carouselItems.length - 1];
+        let prevActiveItemIndex = arrCarouselItems.indexOf(prevItem);
+
+        // Thêm class 'carousel-item-prev' vào current item và prev item
+        prevItem.classList.add('testimonials__slide-prev');
+        reflow(currentItem);
+        currentItem.classList.add('testimonials__slide-end');
+        prevItem.classList.add('testimonials__slide-end');
+
+        prevItem.addEventListener(
+            'transitionend',
+            () => {
+                prevItem.classList.remove('testimonials__slide-end', 'testimonials__slide-prev');
+                prevItem.classList.add('active');
+                paginationItems[prevActiveItemIndex].classList.add('active');
+
+                currentItem.classList.remove('active', 'testimonials__slide-end');
+                paginationItems[currentActiveItemIndex].classList.remove('active');
+            },
+            { once: true },
+        );
+    });
+
+    // loop
+    loopCarousel();
+    function loopCarousel() {
+        setInterval(() => {
+            document.querySelector('.testimonials__slide-btn-next').click();
+        }, 5000);
+    }
+}
+window.addEventListener('template-loaded', initSlider);

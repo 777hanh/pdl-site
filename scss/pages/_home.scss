@@ -91,6 +91,28 @@
     margin: 0 24px;
     padding: 80px 0 40px;
 
+    &__row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    &__more {
+        display: inline-block;
+        color: inherit;
+        font-size: 1.8rem;
+        line-height: 142.444%;
+        padding-left: 12px;
+        padding: 16px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            color: #34733a;
+        }
+    }
+
     &__desc {
         margin-top: 30px;
         max-width: 850px;

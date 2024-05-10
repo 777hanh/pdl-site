@@ -2088,6 +2088,138 @@ body {
   width: min(330px, 100% - 80px);
 }
 
+.testimonials {
+  margin-inline: 24px;
+  padding: 140px 0;
+}
+.testimonials__inner {
+  position: relative;
+}
+.testimonials__cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.testimonials__btn {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials__btn--reverse {
+  transform: rotate(180deg);
+}
+.testimonials__btn:hover {
+  opacity: 1;
+}
+.testimonials__slider {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px;
+  width: 60%;
+  overflow: hidden;
+  z-index: 1;
+}
+.testimonials__slide {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+.testimonials__slide-next, .testimonials__slide-prev, .testimonials__slide.active {
+  display: block;
+}
+.testimonials__slide-end.active, .testimonials__slide-next:not(.testimonials__slide-start) {
+  transform: translateX(100%);
+}
+.testimonials__slide-start.active, .testimonials__slide-prev:not(.testimonials__slide-end) {
+  transform: translateX(-100%);
+}
+.testimonials__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.testimonials__avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonials__info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.testimonials__name {
+  font-family: "DM Serif Display";
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 144.455%;
+  text-transform: uppercase;
+}
+.testimonials__brand {
+  width: 160px;
+}
+.testimonials__job {
+  font-family: "DM Sans";
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+}
+.testimonials__content {
+  margin-top: 40px;
+}
+.testimonials__desc {
+  font-family: "Fanwood Text";
+  font-size: 2.4rem;
+  font-style: italic;
+  line-height: 144.455%;
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pagination__item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  transition: background-color 0.2s linear;
+}
+.pagination__item.active {
+  background-color: #d9d9d9;
+}
+
 .home {
   color: #212922;
 }
@@ -2169,6 +2301,25 @@ body {
 .services {
   margin: 0 24px;
   padding: 80px 0 40px;
+}
+.services__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.services__more {
+  display: inline-block;
+  color: inherit;
+  font-size: 1.8rem;
+  line-height: 142.444%;
+  padding-left: 12px;
+  padding: 16px;
+}
+.services__more:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  color: #34733a;
 }
 .services__desc {
   margin-top: 30px;
