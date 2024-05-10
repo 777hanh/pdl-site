@@ -2496,18 +2496,30 @@ body {
   margin: 0 24px;
   padding: 80px 0 40px;
 }
+@media (max-width: 767.98px) {
+  .services {
+    padding: 60px 0 20px;
+  }
+}
 .services__row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .services__more {
+  font-family: "DM Sans";
   display: inline-block;
   color: inherit;
   font-size: 1.8rem;
   line-height: 142.444%;
   padding-left: 12px;
   padding: 16px;
+}
+@media (max-width: 767.98px) {
+  .services__more {
+    font-size: 1.5rem;
+  }
 }
 .services__more:hover {
   cursor: pointer;
@@ -2516,22 +2528,47 @@ body {
   color: #34733a;
 }
 .services__desc {
+  font-family: "DM Sans";
   margin-top: 30px;
   max-width: 850px;
   width: 100%;
   font-size: 2rem;
+  line-height: 144.455%;
   letter-spacing: 0.12rem;
+}
+@media (max-width: 991.98px) {
+  .services__desc {
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .services__desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+  }
 }
 .services__list {
   margin-top: 70px;
   display: flex;
   gap: 40px;
 }
+@media (max-width: 991.98px) {
+  .services__list {
+    flex-direction: column;
+  }
+}
 .services__item {
   padding: 25px 33px;
   border-radius: 12px;
   border: 1px solid #f0f0f0;
   background: #fff;
+  flex: 1;
+}
+@media (max-width: 767.98px) {
+  .services__item {
+    padding: 20px 24px;
+  }
 }
 .services__item:hover {
   box-shadow: 0px 4px 20px 0px rgba(33, 41, 34, 0.25);
