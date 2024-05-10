@@ -69,6 +69,13 @@
         display: block;
         font-size: 6rem;
         font-weight: 700;
+
+        @include abstracts.screen(md) {
+            font-size: 5rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 4.8rem;
+        }
     }
 
     &__span-mark {
@@ -78,21 +85,43 @@
         font-size: 7rem;
         font-style: italic;
         letter-spacing: 0.14rem;
+
+        @include abstracts.screen(md) {
+            font-size: 6rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 5.8rem;
+        }
     }
 
     &__desc {
+        font-family: 'DM Sans';
         margin-top: 55px;
         padding-right: 40px;
         color: #fff;
         font-size: 2.6rem;
         font-weight: 400;
         letter-spacing: 0.0312rem;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__video {
         margin-top: 20px;
         width: 100%;
         background-color: #212922;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 }
 

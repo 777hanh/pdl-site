@@ -1648,7 +1648,7 @@ html {
 }
 
 body {
-  font-family: "DM San";
+  font-family: "DM Sans";
   font-size: 1.6rem;
   color: var(--text-color);
   background: var(--body-bg-color);
@@ -2374,7 +2374,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 .partnership__item {
   display: flex;
@@ -2470,6 +2470,16 @@ body {
   font-size: 6rem;
   font-weight: 700;
 }
+@media (max-width: 991.98px) {
+  .hero__span {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__span {
+    font-size: 4.8rem;
+  }
+}
 .hero__span-mark {
   display: block;
   color: #47c052;
@@ -2478,7 +2488,18 @@ body {
   font-style: italic;
   letter-spacing: 0.14rem;
 }
+@media (max-width: 991.98px) {
+  .hero__span-mark {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__span-mark {
+    font-size: 5.8rem;
+  }
+}
 .hero__desc {
+  font-family: "DM Sans";
   margin-top: 55px;
   padding-right: 40px;
   color: #fff;
@@ -2486,10 +2507,30 @@ body {
   font-weight: 400;
   letter-spacing: 0.0312rem;
 }
+@media (max-width: 991.98px) {
+  .hero__desc {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__desc {
+    margin-top: 20px;
+  }
+}
 .hero__video {
   margin-top: 20px;
   width: 100%;
   background-color: #212922;
+}
+@media (max-width: 991.98px) {
+  .hero__video {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__video {
+    margin-top: 20px;
+  }
 }
 
 .services {
