@@ -1,0 +1,461 @@
+@use '../abstracts';
+
+.solutions {
+    &__hero {
+        margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            background: #5b8266;
+            padding: 0 40px;
+        }
+    }
+
+    &__hero-content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 100px 0;
+        max-width: 490px;
+        width: 100%;
+
+        @include abstracts.screen(md) {
+            padding: 60px 0;
+        }
+    }
+
+    &__hero-title {
+        color: #5b8266;
+        font-size: 1.8rem;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            color: #fff;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__hero-heading {
+        margin-top: 30px;
+        color: #212922;
+        font-family: 'DM Serif Display';
+        font-size: 6.4rem;
+        font-style: italic;
+        line-height: 150.55%;
+
+        @include abstracts.screen(md) {
+            color: #fff;
+            font-size: 5.5rem;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            font-size: 4.8rem;
+        }
+    }
+
+    &__hero-desc {
+        margin-top: 25px;
+        color: #212922;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+            color: #fff;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 10px;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__hero-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        height: 55px;
+        max-width: 220px;
+        border-radius: 20px;
+        background: #5b8266;
+
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+
+        @include abstracts.screen(md) {
+            border: 1px solid #fff;
+            margin-top: 50px;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+    }
+
+    &__hero-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        margin-top: 80px;
+
+        @include abstracts.screen(md) {
+            margin-top: 60px;
+        }
+    }
+
+    &__title {
+        color: #212922;
+        font-family: 'DM Serif Display';
+        font-size: 3.3rem;
+        font-weight: 500;
+        line-height: 150.55%;
+    }
+
+    &__group {
+        margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__item {
+        padding: 25px 25px 30px;
+    }
+
+    &__item-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 60px;
+        height: 60px;
+
+        @include abstracts.screen(sm) {
+            width: 48px;
+            height: 48px;
+        }
+        @include abstracts.screen(xs) {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &__item-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__item-heading {
+        margin-top: 40px;
+        color: #212922;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 144.455%;
+
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+        @include abstracts.screen(xs) {
+            margin-top: 16px;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__item-desc {
+        margin-top: 25px;
+        color: #212922;
+        font-family: 'DM Sans';
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.455%;
+
+        @include abstracts.screen(sm) {
+            margin-top: 16px;
+            font-size: 1.6rem;
+        }
+        @include abstracts.screen(xs) {
+            margin-top: 10px;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__info {
+        margin-top: 30px;
+        padding-left: 60px;
+
+        @include abstracts.screen(md) {
+            padding-left: 40px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        color: #5b8266;
+        font-size: 2rem;
+        line-height: 1.2;
+        text-decoration-line: underline;
+
+        @include abstracts.screen(md) {
+            margin-top: 10px;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__item-link-icon {
+        margin-left: 20px;
+        width: 12px;
+        height: 12px;
+        object-fit: cover;
+    }
+
+    &__action {
+        margin-top: 70px;
+        padding: 100px 0;
+        background: #5b8266;
+
+        @include abstracts.screen(md) {
+            margin-top: 50px;
+            padding: 70px 0;
+            text-align: center;
+        }
+        @include abstracts.screen(sm) {
+            padding: 50px 0;
+        }
+    }
+
+    &__action-heading {
+        color: #fefefe;
+        font-size: 6.4rem;
+        line-height: 150.55%;
+
+        @include abstracts.screen(md) {
+            font-size: 5.8rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 5rem;
+        }
+    }
+
+    &__action-desc {
+        margin-top: 25px;
+        color: #fefefe;
+        font-size: 3.6rem;
+        font-weight: 400;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 3rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__action-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        max-width: 171px;
+        height: 55px;
+
+        border-radius: 20px;
+        background: #fefefe;
+
+        color: #2f2f2f;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 48px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 30px;
+            height: 44px;
+        }
+    }
+
+    &__banner {
+        padding: 60px 0;
+        border-bottom: 4px solid rgba(91, 130, 102, 0.16);
+        background: #212922;
+    }
+
+    &__banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 400px;
+    }
+
+    &__banner-heading {
+        color: #fff;
+        font-size: 4.4rem;
+        font-weight: 500;
+        line-height: 150.55%;
+
+        @include abstracts.screen(md) {
+            font-size: 3.8rem;
+            padding: 0 40px;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 3.3rem;
+            padding: 0 30px;
+        }
+    }
+
+    &__banner-desc {
+        margin-top: 40px;
+        color: #fff;
+        font-size: 2.4rem;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+            font-size: 2rem;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            font-size: 1.9rem;
+        }
+    }
+}
+
+.faq {
+    &__inner {
+        margin: 0 auto 0;
+        padding: 60px 100px;
+
+        @include abstracts.screen(md) {
+            padding: 40px 60px;
+        }
+        @include abstracts.screen(md) {
+            padding: 20px 30px;
+        }
+    }
+
+    &__heading {
+        color: #212922;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 137.5%;
+        text-align: center;
+
+        @include abstracts.screen(md) {
+            font-size: 3rem;
+        }
+        @include abstracts.screen(md) {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__list {
+        margin-top: 60px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+    }
+
+    &__item {
+        padding: 0 24px;
+
+        & + & {
+            margin-top: 30px;
+
+            @include abstracts.screen(sm) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 24px;
+        background-color: #5b826629;
+        border-radius: 8px;
+
+        @include abstracts.screen(md) {
+            padding: 8px 16px;
+        }
+    }
+
+    &__q-title {
+        color: #212922;
+        font-size: 1.9rem;
+        font-weight: 700;
+        line-height: 168.421%;
+        letter-spacing: -0.02rem;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            font-weight: 600px;
+        }
+    }
+
+    &__a {
+        display: none;
+    }
+
+    &__a.show {
+        display: block;
+    }
+
+    &__desc {
+        padding: 14px 48px;
+        color: #212922;
+        font-size: 1.6rem;
+        line-height: 168.421%;
+        letter-spacing: -0.02rem;
+
+        @include abstracts.screen(md) {
+            padding: 8px 24px;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 2rem;
+        line-height: 1;
+        padding: 10 16px;
+
+        cursor: pointer;
+    }
+}
