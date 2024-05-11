@@ -1,0 +1,188 @@
+@use '../abstracts';
+
+.philosophy {
+    &__inner {
+        margin-bottom: 80px;
+    }
+    &__hero {
+        background-color: #fff;
+        background: url('../imgs/philosophy-bg.png') no-repeat center center/cover;
+    }
+
+    &__hero-content {
+        padding: 150px 40px;
+
+        @include abstracts.screen(md) {
+            padding: 80px 0px;
+        }
+    }
+
+    &__hero-title {
+        color: #5b8266;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 144.455%;
+        text-transform: uppercase;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+        @include abstracts.screen(sm) {
+            text-align: center;
+        }
+    }
+
+    &__hero-heading {
+        margin-top: 50px;
+        max-width: 450px;
+        width: 100%;
+
+        font-family: 'DM Serif Display';
+        font-size: 7.5rem;
+        font-style: italic;
+        line-height: 150.55%;
+        color: #212922;
+
+        @include abstracts.screen(md) {
+            font-size: 6.8rem;
+        }
+
+        @include abstracts.screen(sm) {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        @include abstracts.screen(xs) {
+            font-size: 6rem;
+        }
+    }
+
+    &__intro {
+        background: #212922;
+        background: url('../imgs/philosophy-i.png') no-repeat center center/cover;
+    }
+
+    &__intro-content {
+        padding: 40px 80px;
+
+        @include abstracts.screen(md) {
+            padding: 40px 40px;
+        }
+        @include abstracts.screen(xs) {
+            padding: 40px 20px;
+        }
+    }
+
+    &__intro-title {
+        color: #5b8266;
+        font-family: 'DM Serif Display';
+        font-size: 2rem;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+        @include abstracts.screen(xs) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__intro-text {
+        margin: 40px auto 0;
+
+        width: 100%;
+        max-width: 800px;
+
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 150.55%;
+        backdrop-filter: blur(10px);
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+        }
+        @include abstracts.screen(xs) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__item {
+        margin-top: 80px;
+
+        @include abstracts.screen(md) {
+            margin-top: 60px;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 40px;
+        }
+    }
+
+    &__col-img {
+        @include abstracts.screen(md) {
+            order: 1;
+        }
+    }
+    &__col-text {
+        @include abstracts.screen(md) {
+            order: 2;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        @include abstracts.screen(md) {
+            padding: 0 60px;
+            order: 1;
+        }
+        @include abstracts.screen(sm) {
+            padding: 0 20px;
+        }
+    }
+
+    &__content-text {
+        margin-left: 20px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            order: 2;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    &__title {
+        color: #212922;
+        font-size: 3.3rem;
+        font-weight: 600;
+        line-height: 150.55%;
+
+        @include abstracts.screen(md) {
+            font-size: 2.8rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 20px;
+        padding-left: 40px;
+        color: #212922;
+        font-size: 1.8rem;
+        line-height: 144.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            padding-left: 0px;
+            margin-top: 10px;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.5rem;
+        }
+    }
+}
